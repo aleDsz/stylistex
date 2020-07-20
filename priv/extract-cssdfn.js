@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 /**
+ * Code from: https://github.com/tidoust/reffy
+ *
  * The CSS definitions extractor takes the URL of a spec as input and outputs
  * a structured JSON-like object that contains the CSS definitions found in the
  * spec.
