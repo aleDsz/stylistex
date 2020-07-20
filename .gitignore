@@ -24,3 +24,7 @@ stylistex-*.tar
 
 # ElixirLS
 .elixir_ls
+
+# NodeJS
+node_modules/
+.cache/
