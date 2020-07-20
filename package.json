@@ -1,0 +1,16 @@
+{
+  "name": "stylistex",
+  "version": "0.1.0-alpha",
+  "description": "A CSS parser for Elixir",
+  "main": "priv/extract-cssdfn.js",
+  "repository": "git@github.com:aleDsz/stylistex.git",
+  "author": "Alexandre de Souza <alexandre@aledsz.com.br>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "extract": "extract-cssdfn"
+  },
+  "dependencies": {
+    "reffy": "https://github.com/tidoust/reffy"
+  }
+}
