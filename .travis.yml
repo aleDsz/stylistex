@@ -1,7 +1,6 @@
 language: elixir
 sudo: false
 script:
-  - if [ "$CHECK_FORMATTED" = true ]; then mix format --check-formatted; fi
   - mix test --trace
 matrix:
   include:
