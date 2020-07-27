@@ -3,10 +3,15 @@ defmodule Stylexer.Tokenizer do
   Tokenize the CSS definition
   """
 
+  @typedoc """
+  Token definition when consuming CSS with Lexer
+  """
+  @type token :: list({atom(), pos_integer(), char()})
+
   @doc """
   Consume the stream with UTF-8 encoding
   """
-  @spec consume(expression :: binary() | charlist()) :: {:ok, term()} | {:error, term()}
+  @spec consume(expression :: binary() | charlist()) :: {:ok, token()} | {:error, term()}
   def consume(expression) do
     expression =
       expression
