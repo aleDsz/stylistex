@@ -31,3 +31,6 @@ node_modules/
 
 # Remove Esy (WHT?)
 _esy/
+
+# Erlang code
+src/*.erl
