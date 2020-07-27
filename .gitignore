@@ -28,3 +28,6 @@ stylistex-*.tar
 # NodeJS
 node_modules/
 .cache/
+
+# Remove Esy (WHT?)
+_esy/
