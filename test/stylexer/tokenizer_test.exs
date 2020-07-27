@@ -5,11 +5,7 @@ defmodule Stylexer.TokenizerTest do
 
   describe "if we read the token so" do
     test "escaped strings should be parsed" do
-      assert {:ok, [
-        {:escaped_token, 1, 'a'},
-        {:escaped_token, 1, 'b'},
-        {:escaped_token, 1, 'c'}
-      ]} === Tokenizer.consume("abc") 
+      assert {:ok, [{:escaped_token, 1, 'abc'}]} === Tokenizer.consume("abc")
     end
 
     test "digits should be parsed" do
