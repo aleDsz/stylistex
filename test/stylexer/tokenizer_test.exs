@@ -9,7 +9,7 @@ defmodule Stylexer.TokenizerTest do
     end
 
     test "digits should be parsed" do
-      assert {:ok, [{:digit_token, 1, '123'}]} === Tokenizer.consume("123") 
+      assert {:ok, [{:digit_token, 1, '123'}]} === Tokenizer.consume("123")
     end
   end
 end
