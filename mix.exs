@@ -25,7 +25,8 @@ defmodule StylistEx.MixProject do
 
   defp deps do
     [
-      {:jason, "~> 1.2"}
+      # Serializer
+      {:jason, "~> 1.2"},
     ]
   end
 
