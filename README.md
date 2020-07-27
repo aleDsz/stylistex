@@ -1,4 +1,4 @@
-# StylistEx
+# StylistEx [![Build Status](https://travis-ci.org/aleDsz/stylistex.svg?branch=master)](https://travis-ci.org/aleDsz/stylistex)
 
 The CSS parser for Elixir.
 
