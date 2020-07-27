@@ -2,16 +2,16 @@ Definitions.
 
 INT         = [0-9]+
 FLOAT       = [0-9\.]+
+HEXADECIMAL = [^#[0-9A-Fa-f]{3,6}]
 STRING      = [a-zA-Z_\-]+
-HEXADECIMAL = [[0-9A-Fa-f]{3,6}]
 WHITESPACE  = [\s\t\n\r]
 COMMENTARY  = [\(/\*\([^*]|[\r\n]|\(\*+\([^*/]|[\r\n]\)\)\)*\*+/\)|\(//.*\)]
 
 Rules.
 {WHITESPACE}+ : skip_token.
+{HEXADECIMAL} : {token, {hex_token, TokenLine, TokenChars}}.
 {INT}         : {token, {digit_token,  TokenLine, TokenChars}}.
 {FLOAT}       : {token, {float_token,  TokenLine, TokenChars}}.
-{HEXADECIMAL} : {token, {hex_token, TokenLine, TokenChars}}.
 {STRING}      : {token, {escaped_token, TokenLine, TokenChars}}.
 {COMMENTARY}  : {token, {commentary_token, TokenLine, TokenChars}}.
 \#            : {token, {hash_token,  TokenLine, TokenChars}}.
