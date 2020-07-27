@@ -2,7 +2,7 @@ Definitions.
 
 INT         = [0-9]+
 FLOAT       = [0-9\.]+
-HEXADECIMAL = #[0-9A-Fa-f]{3,6}
+HEXCOLOR    = #[0-9A-Fa-f]+
 STRING      = [a-zA-Z_\-]+
 EOF         = [\r$]
 WHITESPACE  = [\s\t\n]
@@ -12,7 +12,6 @@ FUNCTION    = (.*)\((.*)\)
 
 Rules.
 {WHITESPACE}+ : skip_token.
-{HEXADECIMAL} : {token, {hex_token, TokenLine, TokenChars}}.
 {COMMENTARY}  : {token, {commentary_token, TokenLine, TokenChars}}.
 {FUNCTION}    : {token, {function_token, TokenLine, TokenChars}}.
 {URL}         : {token, {url_token, TokenLine, TokenChars}}.
@@ -30,6 +29,7 @@ Rules.
 \,            : {token, {comma_token,  TokenLine, TokenChars}}.
 \;            : {token, {semicolon_token,  TokenLine, TokenChars}}.
 \:            : {token, {colon_token,  TokenLine, TokenChars}}.
+{HEXCOLOR}    : {token, {hex_token, TokenLine, TokenChars}}.
 \.            : {token, {dot_token,  TokenLine, TokenChars}}.
 \>            : {token, {major_token,  TokenLine, TokenChars}}.
 \+            : {token, {plus_token,  TokenLine, TokenChars}}.
