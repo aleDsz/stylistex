@@ -13,17 +13,9 @@ defmodule Stylexer.TokenizerTest do
     end
 
     test "hex digits should be parsed" do
-      assert {:ok, [
-        {:hash_token, 1, '#'},
-        {:escaped_token, 1, 'bbaa'},
-        {:digit_token, 1, '13'}
-      ]} === Tokenizer.consume("#bbaa13")
+      assert {:ok, [{:hex_token, 1, '#bbaa13'}]} === Tokenizer.consume("#bbaa13")
 
-      assert {:ok, [
-        {:hash_token, 1, '#'},
-        {:escaped_token, 1, 'Bbaa'},
-        {:digit_token, 1, '13'}
-      ]} === Tokenizer.consume("#Bbaa13")
+      assert {:ok, [{:hex_token, 1, '#Bbaa13'}]} === Tokenizer.consume("#Bbaa13")
     end
 
     test "multline commentaries should be parsed" do
@@ -55,9 +47,7 @@ defmodule Stylexer.TokenizerTest do
         {:left_curly_token, 1, '{'},
         {:escaped_token, 2, 'background'},
         {:colon_token, 2, ':'},
-        {:hash_token, 2, '#'},
-        {:escaped_token, 2, 'ffaa'},
-        {:digit_token, 2, '12'},
+        {:hex_token, 2, '#ffaa12'},
         {:semicolon_token, 2, ';'},
         {:right_curly_token, 3, '}'}
       ]} === Tokenizer.consume(css)
@@ -71,9 +61,7 @@ defmodule Stylexer.TokenizerTest do
         {:left_curly_token, 1, '{'},
         {:escaped_token, 1, 'background'},
         {:colon_token, 1, ':'},
-        {:hash_token, 1, '#'},
-        {:escaped_token, 1, 'ffaa'},
-        {:digit_token, 1, '12'},
+        {:hex_token, 1, '#ffaa12'},
         {:semicolon_token, 1, ';'},
         {:right_curly_token, 1, '}'}
       ]} === Tokenizer.consume(css)
