@@ -25,11 +25,7 @@ defmodule StylistEx.MixProject do
 
   defp deps do
     [
-      # Serializer
-      {:jason, "~> 1.2"},
-
-      # Because TDD is awesome
-      {:mix_test_watch, "~> 1.0", only: [:dev, :test], runtime: false}
+      {:jason, "~> 1.2"}
     ]
   end
 
