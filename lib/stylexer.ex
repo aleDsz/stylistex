@@ -11,18 +11,18 @@ defmodule Stylexer do
   @doc """
   Consume the stream with UTF-8 encoding
   """
-  @spec consume(expression :: binary() | charlist()) :: {:ok, token()} | {:error, term()}
-  def consume(expression) do
+  @spec consume!(expression :: binary() | charlist()) :: token() | no_return()
+  def consume!(expression) do
     expression =
       expression
       |> get_expr()
 
     case :lexer.string(expression) do
       {:ok, response, _} ->
-        {:ok, response}
+        response
 
       {:error, reason, _} ->
-        {:error, reason}
+        raise RuntimeError, inspect(reason)
     end
   end
 
