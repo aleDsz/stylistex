@@ -11,7 +11,7 @@ URL         = url\((.*)\)
 FUNCTION    = (.*)\((.*)\) 
 
 Rules.
-{WHITESPACE}+ : skip_token.
+{WHITESPACE}  : {token, {whitespace_token,  TokenLine, TokenChars}}.
 {COMMENTARY}  : {token, {commentary_token, TokenLine, TokenChars}}.
 {FUNCTION}    : {token, {function_token, TokenLine, TokenChars}}.
 {URL}         : {token, {url_token, TokenLine, TokenChars}}.
