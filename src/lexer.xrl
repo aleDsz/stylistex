@@ -9,9 +9,11 @@ WHITESPACE  = [\s\t\n]
 COMMENTARY  = /*(.|[\r\n])*\*/ 
 URL         = url\((.*)\) 
 FUNCTION    = (.*)\((.*)\) 
+CLASS       = [.][a-zA-Z_\-]+
 
 Rules.
 {WHITESPACE}  : {token, {whitespace_token,  TokenLine, TokenChars}}.
+{CLASS}       : {token, {css_class_token,  TokenLine, TokenChars}}.
 {COMMENTARY}  : {token, {commentary_token, TokenLine, TokenChars}}.
 {FUNCTION}    : {token, {function_token, TokenLine, TokenChars}}.
 {URL}         : {token, {url_token, TokenLine, TokenChars}}.
