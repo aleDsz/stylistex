@@ -1,206 +1,206 @@
 body {
-	/* background: #1B1C1D; */
-	width: 100%;
-	height: 100%;
+  /* background: #1B1C1D; */
+  width: 100%;
+  height: 100%;
 }
 
 .ui.inverted.header > a {
-	color: #E84545;
+  color: #e84545;
 }
 
 h3 {
-	font-weight: normal;
+  font-weight: normal;
 }
 
 .ui.super-h2 {
-	margin-bottom: 192px;
+  margin-bottom: 192px;
 }
 
 ol.notes > li {
-	list-style-type: none;
+  list-style-type: none;
 }
 
 /**
  * Custom colors
  */
 .ui.primary.inverted.segment {
-	background: #2D4059;
-	height: 100vh;
+  background: #2d4059;
+  height: 100vh;
 }
 
 .ui.text.inverted.segment {
-	background: #2B2E4A;
+  background: #2b2e4a;
 }
 
 .ui.link.inverted.segment {
-	background: #53354A;
+  background: #53354a;
 }
 
 .ui.photo.inverted.segment {
-	background: #3D3551;
+  background: #3d3551;
 }
 
 .ui.photoset.inverted.segment {
-	background: #393E46;
+  background: #393e46;
 }
 
 .ui.quote.inverted.segment {
-	background: #145374;
+  background: #145374;
 }
 
 .ui.chat.inverted.segment {
-	background: #544D7E;
+  background: #544d7e;
 }
 
 .ui.video.inverted.segment {
-	background: #39627F;
+  background: #39627f;
 }
 
 .ui.audio.inverted.segment {
-	background: #5E9387;
+  background: #5e9387;
 }
 
 .ui.comments,
 .ui.list {
-	background: rgba(255, 255, 255, 0.8);
-	padding: 5px 5px 5px 5px;
-	border-radius: 5px;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 5px 5px 5px 5px;
+  border-radius: 5px;
 }
 
 .ui.comments > .comment.white {
-	color: #000;
-	border-bottom: 1px #f3f3f3 solid;
+  color: #000;
+  border-bottom: 1px #f3f3f3 solid;
 }
 
 .ui.primary.buttons .button,
 .ui.primary.button {
-	background-color: #E84545;
+  background-color: #e84545;
 }
 
 .ui.primary.button:hover {
-	background-color: #C84545;
+  background-color: #c84545;
 }
 
 .ui.primary.button:focus,
 .ui.primary.button:active {
-	background-color: #A84545;
+  background-color: #a84545;
 }
 
 .ui.secondary.inverted.pointing.menu {
-	border: none;
+  border: none;
 }
 
 .ui.inverted.sidebar.menu {
-	background: #903749;
+  background: #903749;
 }
 
 /**
  * Custom CSS
  */
 .ui.blue-link {
-	color: #4FC3F7;
-	text-decoration: underline;
+  color: #4fc3f7;
+  text-decoration: underline;
 }
 
 .ui.unlink {
-	color: white;
-	text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 
 .ui.inverted.menu.fixed {
-	visibility: hidden;
-	background: rgba(27, 28, 29, 0.7);
-	border-radius: 0;
-	line-height: 30px;
+  visibility: hidden;
+  background: rgba(27, 28, 29, 0.7);
+  border-radius: 0;
+  line-height: 30px;
 }
 
 .ui.inverted.menu.fixed > .item,
 .ui.inverted.menu.fixed > .button,
 .right.menu > .item,
 .right.menu > .button {
-	border: none;
-	line-height: 30px;
+  border: none;
+  line-height: 30px;
 }
 
 .ui.vertical.divider.white {
-	color: white;
+  color: white;
 }
 
 /**
  * Color Palette
  */
 .colorHunt-1 {
-	background: #2B2E4A;
+  background: #2b2e4a;
 }
 
 .colorHunt-2 {
-	background: #E84545;
+  background: #e84545;
 }
 
 .colorHunt-3 {
-	background: #903749;
+  background: #903749;
 }
 
 .colorHunt-4 {
-	background: #53354A;
+  background: #53354a;
 }
 
 /**
  * Styled Theme
  */
 .masthead.segment {
-	min-height: 700px;
-	padding: 1em 0em;
+  min-height: 700px;
+  padding: 1em 0em;
 }
 .masthead .logo.item img {
-	margin-right: 1em;
+  margin-right: 1em;
 }
 .masthead .ui.menu .ui.button {
-	margin-left: 0.5em;
+  margin-left: 0.5em;
 }
 .masthead h1.ui.header {
-	margin-top: 3em;
-	margin-bottom: 0em;
-	font-size: 4em;
-	font-weight: normal;
+  margin-top: 3em;
+  margin-bottom: 0em;
+  font-size: 4em;
+  font-weight: normal;
 }
 .masthead h2 {
-	font-size: 1.7em;
-	font-weight: normal;
+  font-size: 1.7em;
+  font-weight: normal;
 }
 
 .ui.vertical.stripe {
-	padding: 8em 0em;
+  padding: 8em 0em;
 }
 .ui.vertical.stripe h3 {
-	font-size: 2em;
+  font-size: 2em;
 }
 .ui.vertical.stripe .button + h3,
 .ui.vertical.stripe p + h3 {
-	margin-top: 3em;
+  margin-top: 3em;
 }
 .ui.vertical.stripe .floated.image {
-	clear: both;
+  clear: both;
 }
 .ui.vertical.stripe p {
-	font-size: 1.33em;
+  font-size: 1.33em;
 }
 .ui.vertical.stripe .horizontal.divider {
-	margin: 3em 0em;
+  margin: 3em 0em;
 }
 
 .quote.stripe.segment {
-	padding: 0em;
+  padding: 0em;
 }
 .quote.stripe.segment .grid .column {
-	padding-top: 5em;
-	padding-bottom: 5em;
+  padding-top: 5em;
+  padding-bottom: 5em;
 }
 
 .footer.segment {
-	padding: 5em 0em;
+  padding: 5em 0em;
 }
 
 .secondary.pointing.menu .toc.item {
-	display: none;
+  display: none;
 }
